@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Main {
+ 
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        double a;
+        int totalDePares = 0;
+        for (int i = 0 ; i < 5 ; i++) {
+            a = ler.nextDouble();
+            if(( a % 2) == 0 ) {
+                totalDePares++;
+            }
+        }
+        System.out.println(totalDePares + " valores pares");
+ 
+    }
+ 
+}
