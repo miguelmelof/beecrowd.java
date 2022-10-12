@@ -1,0 +1,24 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+        Scanner ler = new Scanner(System.in);
+        int i = ler.nextInt();
+        int in = 0;
+        int out = 0;
+        for(int i2 = 0; i2 < i ; i2++) {
+          int a = ler.nextInt();
+          if (a >= 10 && a <= 20) {
+              in++;
+          } else {
+              out++;
+          }
+        }
+        System.out.println(in + " in");
+        System.out.println(out + " out");
+ 
+    }
+ 
+}
