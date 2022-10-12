@@ -1,0 +1,32 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+         Scanner ler = new Scanner(System.in);
+        int a;
+        int b;
+        int aux;
+        int soma = 0;
+        a = ler.nextInt();
+        b = ler.nextInt();
+        if(b > a) {
+            aux = a;
+            a = b;
+            b = aux;
+        }
+        if ( (a % 2) != 0 ) {
+            a -= 1;
+        }
+        while( a != b) {
+            b++;
+            if((b % 2) != 0) {
+                soma += b;
+            }
+        }
+        System.out.println(soma);
+       
+    }
+ 
+}
