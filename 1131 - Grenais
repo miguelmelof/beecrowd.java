@@ -1,0 +1,44 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+        Scanner ler = new Scanner(System.in);
+        int golsdogremio;
+        int golsdointer;
+        int totaldejogos = 0;
+        int vitoriasdogremio = 0;
+        int vitoriasdointer = 0;
+        int empates = 0;
+
+        while (true) {
+            golsdointer = ler.nextInt();
+            golsdogremio= ler.nextInt();
+            totaldejogos++;
+            if (golsdointer > golsdogremio) {
+                vitoriasdointer++;
+            } else if (golsdogremio > golsdointer) {
+                vitoriasdogremio++;
+            } else {
+                empates++;
+            }
+            System.out.println("Novo grenal (1-sim 2-nao)");
+            int i = ler.nextInt();
+            if( i == 2) {
+                break;
+            }
+        }
+        System.out.println(totaldejogos + " grenais");
+        System.out.println("Inter:" + vitoriasdointer);
+        System.out.println("Gremio:" + vitoriasdogremio);
+        System.out.println("Empates:" + empates);
+        if(vitoriasdointer > vitoriasdogremio) {
+            System.out.println("Inter venceu mais");
+        } else if (vitoriasdogremio > vitoriasdointer) {
+            System.out.println("Gremio venceu mais");
+        }
+    }
+ 
+}
