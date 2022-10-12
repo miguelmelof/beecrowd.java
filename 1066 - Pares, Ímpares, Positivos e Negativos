@@ -1,0 +1,34 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+        Scanner ler = new Scanner(System.in);
+        double a;
+        int totalDePares = 0;
+        int totalDeImpares = 0;
+        int totalDePositivos = 0;
+        int totalDeNegativos = 0;
+        for (int i = 0 ; i < 5 ; i++) {
+            a = ler.nextDouble();
+
+            if(( a % 2) == 0 ) {
+                totalDePares++;
+            } else {
+                totalDeImpares++;
+            }
+
+            if(a > 0) {
+                totalDePositivos++;
+            } else if (a < 0) {
+                totalDeNegativos++;
+            }
+        }
+        System.out.println(totalDePares + " valor(es) par(es)");
+        System.out.println(totalDeImpares + " valor(es) impar(es)");
+        System.out.println(totalDePositivos + " valor(es) positivo(s)");
+        System.out.println(totalDeNegativos + " valor(es) negativo(s)");
+    }
+}
